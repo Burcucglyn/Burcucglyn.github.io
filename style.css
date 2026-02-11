@@ -254,7 +254,7 @@ section:last-of-type {
     color: var(--text-bright);
 }
 
-<<<<<<< HEAD
+
 .social-links {
     display: flex;
     gap: 1rem;
@@ -277,8 +277,6 @@ section:last-of-type {
     transform: translateY(-2px);
 }
 
-=======
->>>>>>> 08d5697a2a4d715089387e42988ed73186e4f901
 /* --- SECTION HEADERS --- */
 .section-header {
     margin-bottom: 3.5rem;
