@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing — Burdzhu Chaglayan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-name">Burdzhu Chaglayan</a>
+        <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html">Work</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="me.html">Beyond Work</a></li>
+            <li><a href="writing.html" class="active">Writing</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <div class="page-header">
+            <div class="page-label">Writing</div>
+            <h1>Notes and thinking.</h1>
+            <p>Technical notes, project reflections, and things I've learned along the way.</p>
+        </div>
+
+        <section>
+            <div class="blog-placeholder fade-in">
+                <p>Writing section coming soon. I'll be posting here about data engineering decisions, model building lessons, and whatever else seems worth writing down.</p>
+                <p class="accent-text">Check back shortly.</p>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <div class="container">
+            Burdzhu Chaglayan &middot; 2025
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => document.querySelector('.nav-links').classList.remove('open'));
+        });
+    </script>
+
+</body>
+</html>

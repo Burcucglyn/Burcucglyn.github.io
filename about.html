@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — Burdzhu Chaglayan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-name">Burdzhu Chaglayan</a>
+        <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html">Work</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="me.html">Beyond Work</a></li>
+            <li><a href="writing.html">Writing</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <div class="page-header">
+            <div class="page-label">About</div>
+            <h1>The longer version.</h1>
+            <p>How I got here and what I'm looking for next.</p>
+        </div>
+
+        <section>
+            <div class="about-layout fade-in">
+                <div class="about-text">
+                    <p>
+                        I started in environmental engineering, where I learned that real-world data is messy by default and that the work before the analysis often determines whether the results mean anything. Three years in marketing taught me something different: <span class="highlight">how to translate numbers into decisions for people who don't care about the method, only the outcome.</span>
+                    </p>
+                    <p>
+                        The MSc in Data Science at Birkbeck brought the technical depth. My dissertation trained 556 machine learning models across London's air quality monitoring networks, but the finding I'm most proud of is a simple one: the previous hour's reading explains almost everything. Sometimes the honest answer is that the problem is simpler than it looks.
+                    </p>
+                    <p>
+                        What I want to do next is build prediction systems that work reliably and translate complex data into something any audience can act on. My background in environmental engineering gives me domain context, but the approach applies wherever messy data meets real decisions &mdash; climate, health, finance, or otherwise.
+                    </p>
+                </div>
+                <img src="images/about-event.jpg" alt="Burdzhu Chaglayan" class="about-image">
+            </div>
+
+            <div class="tech-section fade-in">
+                <div class="tech-group">
+                    <div class="tech-group-label">ML and Data</div>
+                    <div class="tech-list">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">scikit-learn</span>
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">NumPy</span>
+                        <span class="tech-tag">PySpark</span>
+                        <span class="tech-tag">NLTK</span>
+                        <span class="tech-tag">spaCy</span>
+                    </div>
+                </div>
+                <div class="tech-group">
+                    <div class="tech-group-label">Infrastructure</div>
+                    <div class="tech-list">
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Kubernetes</span>
+                        <span class="tech-tag">Google Cloud Platform</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Express</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Oracle SQL</span>
+                        <span class="tech-tag">Git</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CV SECTION -->
+        <section>
+            <div class="section-header fade-in">
+                <div class="section-label">CV</div>
+                <h2>The formal version.</h2>
+            </div>
+
+            <div class="cv-block fade-in" style="margin-bottom: 3rem;">
+                <p>Download the full CV as PDF.</p>
+                <a href="#" class="cv-button" onclick="return false;">Download CV (coming soon)</a>
+            </div>
+
+            <!-- Education -->
+            <div class="cv-section fade-in">
+                <div class="cv-section-title">Education</div>
+
+                <div class="cv-entry">
+                    <div class="cv-entry-header">
+                        <span class="cv-entry-title">MSc Data Science</span>
+                        <span class="cv-entry-date">Jan 2025 — Jan 2026</span>
+                    </div>
+                    <div class="cv-entry-org">Birkbeck, University of London</div>
+                    <div class="cv-entry-desc">
+                        <p>Dissertation: Predictive Modelling for Air Pollution Levels in London. Trained 556 models (Random Forest and CNN) across LAQN and DEFRA monitoring networks. Built a three-stage data cleaning pipeline and demonstrated that t-1 lag features explain 85-95% of hourly prediction variance in Random Forest models.</p>
+                    </div>
+                </div>
+
+                <div class="cv-entry">
+                    <div class="cv-entry-header">
+                        <span class="cv-entry-title">BEng Environmental Engineering</span>
+                        <span class="cv-entry-date">2014 — 2019</span>
+                    </div>
+                    <div class="cv-entry-org">Kocaeli University</div>
+                </div>
+            </div>
+
+            <!-- Projects -->
+            <div class="cv-section fade-in">
+                <div class="cv-section-title">Key Projects</div>
+
+                <div class="cv-entry">
+                    <div class="cv-entry-header">
+                        <span class="cv-entry-title">London Air Quality Prediction</span>
+                        <span class="cv-entry-date">2025</span>
+                    </div>
+                    <div class="cv-entry-org">Python, scikit-learn, TensorFlow, Pandas</div>
+                    <div class="cv-entry-desc">
+                        <p>Built end-to-end ML pipeline predicting hourly air pollution across London using LAQN (78 stations, 6 pollutants) and DEFRA (18 stations, 37 pollutants) APIs. Trained 556 models with Random Forest achieving R² = 0.793 on DEFRA data. Developed three-stage cleaning pipeline reducing metadata issues from 47.5% to 17.2%.</p>
+                    </div>
+                </div>
+
+                <div class="cv-entry">
+                    <div class="cv-entry-header">
+                        <span class="cv-entry-title">Political Speech Classification and Literary Analysis</span>
+                        <span class="cv-entry-date">2025</span>
+                    </div>
+                    <div class="cv-entry-org">Python, spaCy, scikit-learn, NLTK, TF-IDF</div>
+                    <div class="cv-entry-desc">
+                        <p>Built multi-class SVM classifier for 40,000 UK parliamentary speeches achieving 0.51 macro F1-score across 4 political parties. Developed NLP pipeline with TF-IDF vectorisation, custom tokenisation, and SMOTE oversampling. Conducted syntactic analysis of 19th-century novels using dependency parsing and PMI-based word associations.</p>
+                    </div>
+                </div>
+
+                <div class="cv-entry">
+                    <div class="cv-entry-header">
+                        <span class="cv-entry-title">AudioPulse Data Pipeline</span>
+                        <span class="cv-entry-date">2025</span>
+                    </div>
+                    <div class="cv-entry-org">Python, PySpark, Multiprocessing, yt-dlp</div>
+                    <div class="cv-entry-desc">
+                        <p>Data engineering pipeline for YouTube audio collection with serial, parallel, and rate-limited download modes. Thread-safe logging, metadata extraction into structured CSVs, and comparative analysis in both Pandas and PySpark. Parallel processing achieved 5x speed improvement.</p>
+                    </div>
+                </div>
+
+                <div class="cv-entry">
+                    <div class="cv-entry-header">
+                        <span class="cv-entry-title">Piazza API</span>
+                        <span class="cv-entry-date">2025</span>
+                    </div>
+                    <div class="cv-entry-org">Node.js, Express, MongoDB, Docker, Kubernetes, GCP</div>
+                    <div class="cv-entry-desc">
+                        <p>RESTful social platform API with JWT authentication, post expiration logic, and interaction tracking. Deployed across VM (PM2), Docker (docker-compose), and Kubernetes on GKE (5 replicas, load balancer). 20 automated test cases with 100% pass rate.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience -->
+            <div class="cv-section fade-in">
+                <div class="cv-section-title">Experience</div>
+
+                <div class="cv-entry">
+                    <div class="cv-entry-header">
+                        <span class="cv-entry-title">Marketing Assistant</span>
+                        <span class="cv-entry-date">Jul — Sep 2025</span>
+                    </div>
+                    <div class="cv-entry-org">My Final Details App · London</div>
+                    <div class="cv-entry-desc">
+                        <p>Managed social media platforms with data-driven content planning. Applied SEO principles to optimise reach across Facebook, LinkedIn, and YouTube. Tracked engagement metrics and used insights to guide content strategy.</p>
+                    </div>
+                </div>
+
+                <div class="cv-entry">
+                    <div class="cv-entry-header">
+                        <span class="cv-entry-title">Content Creation Intern</span>
+                        <span class="cv-entry-date">May — Jun 2025</span>
+                    </div>
+                    <div class="cv-entry-org">BlueShift Education · London</div>
+                    <div class="cv-entry-desc">
+                        <p>Created educational coding content for children aged 5-15 using Minecraft Education, Scratch, and MakeCode. Collaborated with educators to translate technical concepts into accessible, engaging lessons.</p>
+                    </div>
+                </div>
+
+                <div class="cv-entry">
+                    <div class="cv-entry-header">
+                        <span class="cv-entry-title">Barista and Social Media Manager</span>
+                        <span class="cv-entry-date">Jun 2024 — May 2025</span>
+                    </div>
+                    <div class="cv-entry-org">B&uuml;hler and Co Caf&eacute; · London</div>
+                    <div class="cv-entry-desc">
+                        <p>Achieved 28% follower growth and 35% engagement increase through data-driven content optimisation. Created viral Halloween campaign generating 2,000+ organic impressions. Monitored Instagram Insights to achieve 20% profile visit increase month-on-month.</p>
+                    </div>
+                </div>
+
+                <div class="cv-entry">
+                    <div class="cv-entry-header">
+                        <span class="cv-entry-title">Social Media Executive</span>
+                        <span class="cv-entry-date">Feb 2020 — Nov 2022</span>
+                    </div>
+                    <div class="cv-entry-org">Englyn Limited · London</div>
+                    <div class="cv-entry-desc">
+                        <p>Managed B2C social media strategies using Asana, Hootsuite, and QlikView. Applied Google Analytics and platform insights to track audience behaviour and measure campaign performance. Produced systematic weekly and monthly reports translating complex data into actionable recommendations.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills -->
+            <div class="cv-section fade-in">
+                <div class="cv-section-title">Skills</div>
+                <div class="cv-skills-grid">
+                    <div>
+                        <div class="cv-skill-group-title">Programming</div>
+                        <div class="cv-skill-list">Python (Pandas, NumPy, scikit-learn, TensorFlow, spaCy, NLTK), SQL, R, JavaScript, Linux</div>
+                    </div>
+                    <div>
+                        <div class="cv-skill-group-title">Infrastructure</div>
+                        <div class="cv-skill-list">Docker, Kubernetes, Google Cloud Platform, Node.js, Express, MongoDB, Oracle SQL, Git</div>
+                    </div>
+                    <div>
+                        <div class="cv-skill-group-title">Analytics</div>
+                        <div class="cv-skill-list">Tableau, QlikView, Google Analytics, PySpark</div>
+                    </div>
+                    <div>
+                        <div class="cv-skill-group-title">Languages</div>
+                        <div class="cv-skill-list">English (fluent, professional proficiency), Turkish (native, bilingual)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="cv-section fade-in">
+                <div class="cv-section-title">Certifications</div>
+                <div class="cv-entry-desc">
+                    <p>Google Data Analytics Certificate (Coursera) · Python Programming and Apps (Code First Girls) · Introduction to Data and SQL (Code First Girls) · Tableau Software Visualisation Training</p>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+    <footer>
+        <div class="container">
+            Burdzhu Chaglayan &middot; 2025
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => document.querySelector('.nav-links').classList.remove('open'));
+        });
+    </script>
+
+</body>
+</html>

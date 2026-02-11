@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burdzhu Chaglayan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-name">Burdzhu Chaglayan</a>
+        <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Work</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="me.html">Beyond Work</a></li>
+            <li><a href="writing.html">Writing</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <section class="hero">
+            <div class="hero-label">Environmental Engineer &rarr; Data Scientist</div>
+            <div class="hero-content">
+                <div>
+                    <h1>I enjoy the part most<br>people skip.</h1>
+                    <p class="hero-intro">
+                        Cleaning the mess, finding structure, building pipelines that don't break.
+                        <span class="highlight">Numbers are easy.</span> Reading them honestly, accounting for bias,
+                        spotting what others miss: that's the real work. My engineering background means I solve
+                        problems and build things that work reliably, not just in a notebook.
+                    </p>
+                    <div class="hero-meta">
+                        <span>MSc Data Science, Birkbeck, University of London</span>
+                        <span>London, UK</span>
+                        <a href="mailto:burcucglyn95@gmail.com">burcucglyn95@gmail.com</a>
+                        <a href="https://www.linkedin.com/in/burcucglyn/" target="_blank" rel="noopener">LinkedIn</a>
+                        <a href="https://github.com/Burcucglyn" target="_blank" rel="noopener">GitHub</a>
+                    </div>
+                </div>
+                <img src="images/hero-archway.jpg" alt="Burdzhu Chaglayan" class="hero-image">
+            </div>
+        </section>
+
+        <!-- FEATURED WORK -->
+        <section id="work">
+            <div class="section-header fade-in">
+                <div class="section-label">Featured Work</div>
+                <h2>Things I've built.</h2>
+            </div>
+
+            <div class="project-card fade-in">
+                <a href="https://github.com/Burcucglyn/london-air-quality-prediction" target="_blank" rel="noopener" class="project-card-link">
+                    <div class="project-card-header">
+                        <span class="project-card-title">London Air Quality Prediction</span>
+                        <span class="project-card-arrow">&nearr;</span>
+                    </div>
+                    <p class="project-card-desc">
+                        MSc dissertation. Trained 556 models (Random Forest and CNN) across London's air quality monitoring networks: LAQN (78 stations, 6 regulatory pollutants) and DEFRA (18 stations, 37 pollutants). Compared both networks against shared regulatory pollutants, with an extended comparison across DEFRA's full pollutant set. Built a three-stage cleaning pipeline that reduced LAQN metadata issues from 47.5% to 17.2%. The key finding from the Random Forest models: t-1 lag features explain 85-95% of prediction variance. Hourly air quality prediction is fundamentally a persistence problem, and data quality (DEFRA, 91.2% complete) consistently beat data quantity (LAQN, 141 site-pollutant combinations).
+                    </p>
+                    <div class="project-card-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">scikit-learn</span>
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">Pandas</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="project-card fade-in">
+                <a href="https://github.com/Burcucglyn/audiopulse-pipeline" target="_blank" rel="noopener" class="project-card-link">
+                    <div class="project-card-header">
+                        <span class="project-card-title">AudioPulse Pipeline</span>
+                        <span class="project-card-arrow">&nearr;</span>
+                    </div>
+                    <p class="project-card-desc">
+                        Data engineering pipeline for YouTube audio collection and engagement analysis. Built serial, parallel, and rate-limited download modes with thread-safe logging. Parallel mode ran 5x faster. Ran identical queries in both Pandas and PySpark to compare behaviour on the same dataset.
+                    </p>
+                    <div class="project-card-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">PySpark</span>
+                        <span class="tech-tag">Multiprocessing</span>
+                        <span class="tech-tag">yt-dlp</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="project-card fade-in">
+                <a href="https://github.com/Burcucglyn/piazza-api" target="_blank" rel="noopener" class="project-card-link">
+                    <div class="project-card-header">
+                        <span class="project-card-title">Piazza API</span>
+                        <span class="project-card-arrow">&nearr;</span>
+                    </div>
+                    <p class="project-card-desc">
+                        RESTful social platform with JWT auth, post expiration logic, and interaction tracking. Deployed three ways: VM with PM2, Docker with docker-compose, and Kubernetes on GKE (5 replicas, load balancer). 20 automated tests, 100% pass rate.
+                    </p>
+                    <div class="project-card-tech">
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Express</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Kubernetes</span>
+                        <span class="tech-tag">GCP</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="project-card fade-in">
+                <a href="https://github.com/Burcucglyn/speech-classifier-nlp" target="_blank" rel="noopener" class="project-card-link">
+                    <div class="project-card-header">
+                        <span class="project-card-title">Speech Classifier NLP</span>
+                        <span class="project-card-arrow">&nearr;</span>
+                    </div>
+                    <p class="project-card-desc">
+                        Two NLP projects: syntactic analysis of 19th-century novels using dependency parsing and PMI, and a political speech classifier trained on 40,000 UK parliamentary speeches. SVM with TF-IDF outperformed the SMOTE pipeline &mdash; a valid finding about when simpler wins.
+                    </p>
+                    <div class="project-card-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">spaCy</span>
+                        <span class="tech-tag">NLTK</span>
+                        <span class="tech-tag">scikit-learn</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- OTHER PROJECTS -->
+            <div style="margin-top: 4rem;" class="fade-in">
+                <div class="section-label">Other Projects</div>
+                <div class="compact-projects" style="margin-top: 1.5rem;">
+                    <a href="https://github.com/Burcucglyn/miniyou-data-analysis" target="_blank" rel="noopener" class="compact-project">
+                        <span class="compact-project-name">miniyou-data-analysis</span>
+                        <span class="compact-project-desc">Data analysis toolkit built from scratch without Python built-ins. Complexity analysis and generator vs return decisions for every function.</span>
+                        <span class="compact-project-stack">Python</span>
+                    </a>
+                    <a href="https://github.com/Burcucglyn/database-security-sql" target="_blank" rel="noopener" class="compact-project">
+                        <span class="compact-project-name">database-security-sql</span>
+                        <span class="compact-project-desc">Role-based views with window functions, plus SQL injection analysis (UNION and Blind Boolean) with parameterised query prevention.</span>
+                        <span class="compact-project-stack">Oracle SQL, Python</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- FOUNDATIONS -->
+            <div style="margin-top: 4rem;" class="fade-in">
+                <div class="section-label">Foundations</div>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem; margin-bottom: 1.5rem;">Smaller builds that demonstrate specific concepts.</p>
+                <div class="foundations-grid">
+                    <a href="https://github.com/Burcucglyn/minipost-rest-api" target="_blank" rel="noopener" class="foundation-item">
+                        <div class="foundation-name">minipost-rest-api</div>
+                        <div class="foundation-focus">CRUD API with MongoDB Atlas.</div>
+                    </a>
+                    <a href="https://github.com/Burcucglyn/mini-film-auth" target="_blank" rel="noopener" class="foundation-item">
+                        <div class="foundation-name">mini-film-auth</div>
+                        <div class="foundation-focus">JWT authentication and bcrypt hashing.</div>
+                    </a>
+                    <a href="https://github.com/Burcucglyn/kubernetes-mini-hi" target="_blank" rel="noopener" class="foundation-item">
+                        <div class="foundation-name">kubernetes-mini-hi</div>
+                        <div class="foundation-focus">GKE deployment with scaling and rolling updates.</div>
+                    </a>
+                    <a href="https://github.com/Burcucglyn/docker-express-container" target="_blank" rel="noopener" class="foundation-item">
+                        <div class="foundation-name">docker-express-container</div>
+                        <div class="foundation-focus">Docker containerisation with Alpine Linux.</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+            <div class="section-header fade-in">
+                <div class="section-label">Get in Touch</div>
+                <h2>Let's talk.</h2>
+            </div>
+            <div class="fade-in">
+                <p class="contact-text">
+                    What I want to do next is build prediction systems that work reliably and translate complex data into something any audience can act on. The sector matters less to me than the problem.
+                </p>
+                <div class="contact-links">
+                    <a href="mailto:burcucglyn95@gmail.com" class="contact-link">Email</a>
+                    <a href="https://www.linkedin.com/in/burcucglyn/" target="_blank" rel="noopener" class="contact-link">LinkedIn</a>
+                    <a href="https://github.com/Burcucglyn" target="_blank" rel="noopener" class="contact-link">GitHub</a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <div class="container">
+            Burdzhu Chaglayan &middot; 2025
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => document.querySelector('.nav-links').classList.remove('open'));
+        });
+    </script>
+
+</body>
+</html>
