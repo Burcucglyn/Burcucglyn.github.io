@@ -950,3 +950,13 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+.cv-certifications-list {
+    list-style: disc;
+    margin-left: 1.5rem;
+}
+
+.cv-certifications-list li {
+    margin-bottom: 0.8rem;
+    color: var(--text);
+}
