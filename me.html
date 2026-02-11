@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond Work Who is Burdzhu?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-name">Burdzhu Chaglayan</a>
+        <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html">Work</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="me.html" class="active">Beyond Work</a></li>
+            <li><a href="writing.html">Writing</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <div class="page-header">
+            <div class="page-label">Beyond Work</div>
+            <h1>The rest of the picture.</h1>
+            <p>Work is one part. This is everything else.</p>
+        </div>
+
+        <section>
+            <div class="fade-in">
+                <p class="life-prose">
+                    I'm Turkish, living in London for the past six years. I came here for a different pace and stayed because the city keeps delivering it. <span class="highlight">Most of my time outside of work is spent moving</span> &mdash; in water, on walls, or in the gym. The rest splits between the kitchen, a book, and finding somewhere new to eat.
+                </p>
+            </div>
+
+            <div class="photo-grid fade-in">
+                <img src="images/beach.jpg" alt="Beach">
+                <img src="images/park.jpg" alt="Quick strolling at Vicky park.">
+            </div>
+
+            <div class="life-grid fade-in">
+                <div class="life-item">
+                    <div class="life-item-label">Swimming</div>
+                    <p>Competitive swimmer. This is the constant &mdash; it's been part of my life longer than anything else on this page. I train regularly and it's where my head is clearest. <span class="highlight">The pool is my version of a reset button.</span></p>
+                </div>
+                <div class="life-item">
+                    <div class="life-item-label">Bouldering</div>
+                    <p>Currently climbing V3/V4 problems. I like bouldering because every route is a small puzzle &mdash; you read the wall, plan the sequence, and either the beta works or it doesn't. No ambiguity.</p>
+                </div>
+            </div>
+
+            <div class="photo-pair fade-in">
+                <img src="images/swimming-childhood.jpg" alt="Swimming since childhood">
+                <img src="images/bouldering.png" alt="Bouldering">
+            </div>
+
+            <div class="life-grid fade-in">
+                <div class="life-item">
+                    <div class="life-item-label">Strength Training</div>
+                    <p>Consistent part of the routine. I train to support swimming and climbing, but also because I like the process of tracking progress and adjusting variables over time. Not unlike tuning hyperparameters, honestly.</p>
+                </div>
+                <div class="life-item">
+                    <div class="life-item-label">Cooking</div>
+                    <p>I cook the way I approach most things &mdash; figure out the fundamentals, then improvise. Turkish food is the foundation. London's ingredient access makes everything else possible.</p>
+                </div>
+                <div class="life-item">
+                    <div class="life-item-label">Food</div>
+                    <p>I take eating seriously. Finding the right restaurant, the unexpected neighbourhood spot, the place that does one thing properly &mdash; that's a good day. London is unbeatable for this.</p>
+                </div>
+                <div class="life-item">
+                    <div class="life-item-label">Reading</div>
+                    <p>I read across topics rather than sticking to one genre. Whatever pulls me in. The best books change how I think about something I thought I already understood.</p>
+                </div>
+                <div class="life-item">
+                    <div class="life-item-label">Music</div>
+                    <p>Always on. Whether I'm working, training, or cooking &mdash; music sets the pace. My taste is wide and I'm not precious about it.</p>
+                </div>
+                <div class="life-item">
+                    <div class="life-item-label">Outdoors</div>
+                    <p>Nature is where I go when London gets too loud. Hiking, coast walks, anywhere with open space. Turkey has mountains and coastline that still surprise me every time I go back.</p>
+                </div>
+            </div>
+
+            <div class="photo-grid fade-in">
+                <img src="images/scuba.jpg" alt="Scuba diving">
+                <img src="images/hiking.jpg" alt="Hiking">
+            </div>
+        </section>
+
+        <section>
+            <div class="fade-in">
+                <img src="images/restaurant.jpg" alt="Good food and company." class="photo-single">
+                <p class="life-prose">
+                    <span class="highlight">Travelling</span> ties most of this together. I've lived in enough places to know that the best way to understand somewhere is through the food, the landscape, and how people spend their time when they're not working. That's what I look for wherever I go.
+                </p>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <div class="container">
+            Burdzhu Chaglayan &middot; 2025
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => document.querySelector('.nav-links').classList.remove('open'));
+        });
+    </script>
+
+</body>
+</html>
