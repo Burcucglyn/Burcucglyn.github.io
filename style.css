@@ -656,7 +656,7 @@ footer {
 /* --- HERO IMAGE LAYOUT --- */
 .hero-content {
     display: grid;
-    grid-template-columns: 280px 1fr;
+    grid-template-columns: 1fr 280px;
     gap: 3rem;
     align-items: start;
 }
