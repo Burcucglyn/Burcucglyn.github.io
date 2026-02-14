@@ -1,4 +1,6 @@
-/* burc portfolio styles*/
+/* ========================================
+   BURDZHU CHAGLAYAN — PORTFOLIO STYLES
+   ======================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@300;400;500;600&display=swap');
 
@@ -314,6 +316,53 @@ section:last-of-type {
     font-size: 0.9rem;
     color: var(--text-muted);
     line-height: 1.65;
+}
+
+/* --- TOOLKIT SECTION --- */
+.toolkit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem 2rem;
+}
+
+.toolkit-category {
+    margin-bottom: 0.5rem;
+}
+
+.toolkit-category-name {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--text-bright);
+    letter-spacing: 0.04em;
+    margin-bottom: 0.6rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.toolkit-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.toolkit-items span {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .toolkit-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .toolkit-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* --- PROJECT CARDS --- */
