@@ -319,50 +319,50 @@ section:last-of-type {
 }
 
 /* --- TOOLKIT SECTION --- */
-.toolkit-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem 2rem;
+.toolkit-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-.toolkit-category {
-    margin-bottom: 0.5rem;
+.toolkit-category-box {
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.2rem 1.5rem;
+    background: var(--bg);
 }
 
-.toolkit-category-name {
+.toolkit-category-title {
     font-family: var(--font-mono);
     font-size: 0.78rem;
     font-weight: 500;
-    color: var(--text-bright);
+    color: var(--accent);
     letter-spacing: 0.04em;
-    margin-bottom: 0.6rem;
-    padding-bottom: 0.4rem;
-    border-bottom: 1px solid var(--border);
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
 }
 
-.toolkit-items {
+.toolkit-tags {
     display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
-.toolkit-items span {
-    font-size: 0.88rem;
-    color: var(--text-muted);
-    line-height: 1.5;
+.toolkit-tag {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text);
+    background: var(--bg-hover);
+    border: 1px solid var(--border-light);
+    padding: 0.4rem 0.8rem;
+    border-radius: 3px;
+    letter-spacing: 0.02em;
+    transition: all 0.2s ease;
 }
 
-@media (max-width: 768px) {
-    .toolkit-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .toolkit-grid {
-        grid-template-columns: 1fr;
-    }
+.toolkit-tag:hover {
+    border-color: var(--accent-dim);
+    color: var(--text-bright);
 }
 
 /* --- PROJECT CARDS --- */
