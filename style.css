@@ -1,6 +1,4 @@
-/* ========================================
-   BURDZHU CHAGLAYAN — PORTFOLIO STYLES
-   ======================================== */
+/* burc portfolio styles*/
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@300;400;500;600&display=swap');
 
@@ -284,6 +282,38 @@ section:last-of-type {
     color: var(--text-muted);
     font-size: 0.98rem;
     max-width: 540px;
+}
+
+/* --- DOMAINS SECTION --- */
+.domains-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+}
+
+.domain-item {
+    background: var(--bg);
+    padding: 1.8rem 2rem;
+    transition: background 0.2s ease;
+}
+
+.domain-item:hover {
+    background: var(--bg-hover);
+}
+
+.domain-name {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    color: var(--text-bright);
+    margin-bottom: 0.6rem;
+}
+
+.domain-item p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.65;
 }
 
 /* --- PROJECT CARDS --- */
@@ -908,7 +938,8 @@ footer {
     }
 
     .foundations-grid,
-    .life-grid {
+    .life-grid,
+    .domains-grid {
         grid-template-columns: 1fr;
     }
 
